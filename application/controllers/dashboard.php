@@ -33,9 +33,9 @@ class Dashboard extends CI_Controller {
 	 public function index()
 	 {
 		 $data = array(
-		 'title' => 'Dashboard'
+		 'title' => 'My Tagged Products'
 		 );
-		 $this->load->view('dashboard',$data);
+		 $this->load->view('dashboard/products',$data);
 	 }
 	 public function products() {
 		$data["all_products"] = $this->product_model->get_products();
@@ -50,10 +50,9 @@ class Dashboard extends CI_Controller {
 		$this->load->view('add_product',$data);
 	 }
 	 public function delete($id = 0) {
-		//$data["all_products"] = $this->product_model->get_products();
-		//$data['message']	= $message;
-		$data['title'] ='Add Product';
-		$this->load->view('add_product',$data);
+		$this->product_model->delete($id);
+		$this->session->set_flashdata('delete_message', 'Successfully deleted');
+		redirect('dashboard/products', 'refresh');
 	 }
 	 public function save_product() {
 		$this->form_validation->set_rules('efpr_nfcid', 'NFC ID', 'required');

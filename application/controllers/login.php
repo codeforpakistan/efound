@@ -30,7 +30,7 @@ class Login extends CI_Controller {
 	  {
 		  $session_data = $this->session->userdata('logged_in');
 		  if (isset($session_data['Id'])){
-				redirect('dashboard', 'refresh');
+				redirect('dashboard/products', 'refresh');
 		  }
 		  $data = array(
 			 'title' => 'Login'
@@ -57,7 +57,7 @@ class Login extends CI_Controller {
 							$sess_array = array(
 								'Id' => $row->efus_id,
 								'CNIC' => $row->efus_cnic,
-								'Type' => $row->type
+								'Type' => $row->efus_type
 		
 							);	
 							//print_r($sess_array);exit;
@@ -70,7 +70,7 @@ class Login extends CI_Controller {
 							//{
 							   //$data['page']	= 'dashboard';
 							   //$this->load->view('dashboard',$data);
-							   redirect('dashboard', 'refresh');
+							   redirect('dashboard/products', 'refresh');
 							//}							
 						}
 					}

@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/efound';
+$config['base_url']	= 'http://www.efound.info';
 
 /*
 |--------------------------------------------------------------------------
