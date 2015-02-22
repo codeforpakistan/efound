@@ -7,7 +7,7 @@
 
 <!-- Meta, title, CSS, favicons, etc. -->
 <meta charset="utf-8" />
-<title>Stardom - A Responsive HTML5 Admin UI Template Theme</title>
+<title><?php echo $title; ?> - eFound</title>
 <meta name="keywords" content="HTML5 Bootstrap 3 Admin Template UI Theme" />
 <meta name="description" content="Stardom - A Responsive HTML5 Admin UI Template Theme" />
 <meta name="author" content="Holladay" />

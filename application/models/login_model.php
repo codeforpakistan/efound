@@ -10,8 +10,7 @@ class Login_model extends CI_Model {
 		$this->db->where("efus_cnic",$username);
         $this->db->where("efus_password",$password);
 		$query = $this->db->get("efound_users");
-		//echo 'username'.$username;
-		//echo 'password'.$password;
+		
 		if($query->num_rows() == 0)
 		{
    			return false;

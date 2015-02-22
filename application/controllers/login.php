@@ -32,7 +32,10 @@ class Login extends CI_Controller {
 		  if (isset($session_data['Id'])){
 				redirect('dashboard', 'refresh');
 		  }
-		  $this->load->view('login');
+		  $data = array(
+			 'title' => 'Login'
+		  );
+		  $this->load->view('login',$data);
 	  }
 	  public function verifylogin($message=''){	
 		  $this->form_validation->set_rules('efus_cnic', 'CNIC', 'required');

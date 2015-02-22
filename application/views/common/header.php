@@ -1,6 +1,6 @@
 <header class="navbar navbar-fixed-top">
   <div class="pull-left"> <a class="navbar-brand" href="dashboard.html">
-    <div class="navbar-logo"><img src="<?php echo base_url(); ?>/assets/img/logos/logo.png" class="img-responsive" alt="logo" /></div>
+    <div class="navbar-logo">eFound<!--<img src="<?php echo base_url(); ?>/assets/img/logos/logo.png" class="img-responsive" alt="logo" />--></div>
     </a> </div>
   <div class="pull-right header-btns">
     
